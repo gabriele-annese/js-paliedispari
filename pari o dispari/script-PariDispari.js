@@ -2,7 +2,7 @@
 const numeri =[ 1, 2, 3, 4, 5];
 
 const btnPari = document.querySelector(".pari");
-const btnDispari = document.querySelector(".pari");
+const btnDispari = document.querySelector(".dispari");
 const user = parseInt(prompt("inserisci un numero da 1 a 5"));
 const userFound = numeri.includes(user);
 
@@ -26,6 +26,20 @@ btnPari.addEventListener ("click", function(){
     }
 
 })
+
+btnDispari.addEventListener ("click", function(){
+    const computer = Math.floor(Math.random() * 6) + 1;
+    console.log("numero del computer " + computer);
+    const verifica = computer + user;
+    if(verifica % 2 !== 0){
+        console.log("HAI VINTO");
+    }else{
+        console.log("HAI PERSO")
+    }
+
+})
+
+
 
 
 // const user = parseInt(prompt("inserisci un numero da 1 a 5"));
