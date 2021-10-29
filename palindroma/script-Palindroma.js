@@ -11,6 +11,7 @@ if(parolaInversa === user){
     console.log(`La parola ${user} e la parola ${parolaInversa} NON sono palindrome`)
 }
 
+// ********** funzione************ //
 function invertiParola(word) {
     const wordInversa = word.split('').reverse().join('');
     return wordInversa;
