@@ -16,7 +16,7 @@ if(userFound === true){
 alert("scegli pari o dispari coi bottoni");
 
 btnPari.addEventListener ("click", function(){
-    const computer = Math.floor(Math.random() * 6) + 1;
+    const computer =  numeroRandom (1, 6);
     console.log("numero del computer " + computer);
     const verifica = computer + user;
     if(verifica % 2 === 0){
@@ -28,7 +28,7 @@ btnPari.addEventListener ("click", function(){
 })
 
 btnDispari.addEventListener ("click", function(){
-    const computer = Math.floor(Math.random() * 6) + 1;
+    const computer =  numeroRandom (1, 6);
     console.log("numero del computer " + computer);
     const verifica = computer + user;
     if(verifica % 2 !== 0){
@@ -39,7 +39,10 @@ btnDispari.addEventListener ("click", function(){
 
 })
 
-
+// funzione 
+function numeroRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
 
 
 // const user = parseInt(prompt("inserisci un numero da 1 a 5"));
